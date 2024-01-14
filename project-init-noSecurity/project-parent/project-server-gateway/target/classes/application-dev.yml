@@ -1,0 +1,28 @@
+server:
+  port: 9790
+spring:
+  application:
+    name: server-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.150.105:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOriginPatterns: "*"
+            # 允许请求中携带的头信息
+            allowedHeaders: "*"
+            # 运行跨域的请求方式
+            allowedMethods: "*"
+            # 跨域检测的有效期,单位s
+            maxAge: 36000
+      routes:
+        - id: service-user
+          uri: lb://service-user
+          predicates:
+            - Path=/*/user/**

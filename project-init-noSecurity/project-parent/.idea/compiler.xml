@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="project-model" />
+        <module name="project-server-gateway" />
+        <module name="common-util" />
+        <module name="common-service" />
+        <module name="project-service-client" />
+        <module name="service-user" />
+        <module name="common-log" />
+        <module name="project-manager" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="common-log" options="-parameters" />
+      <module name="common-service" options="-parameters" />
+      <module name="common-util" options="-parameters" />
+      <module name="project-common" options="" />
+      <module name="project-manager" options="-parameters" />
+      <module name="project-model" options="-parameters" />
+      <module name="project-server-gateway" options="-parameters" />
+      <module name="project-service" options="" />
+      <module name="project-service-client" options="-parameters" />
+      <module name="service-user" options="-parameters" />
+    </option>
+  </component>
+</project>
